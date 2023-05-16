@@ -32,9 +32,6 @@ body{
 }
 
 /*Navigation Rules/Header */
-.mobile_arrow{
-    display: none;
-}
 
 .header{
     background-color: blueviolet; /*temporary*/
@@ -61,6 +58,13 @@ body{
     margin-left: 25px;
 }
 
+.hamburger{
+    display: none;
+}
+
+.bar{
+}
+
 .nav_menu{
     flex-grow: 3;
     display: flex;
@@ -77,7 +81,7 @@ body{
 }
 
 #site_links li{
-    margin: 0px 0.25rem;
+    margin: 0px 25px;
 }
 
 #site_links a{
@@ -239,7 +243,7 @@ footer{
     }
     
     #site_links li{
-        margin: 0px 0.25rem;
+        margin: 0px 15px;
     }
     
     #site_links a{
@@ -318,11 +322,10 @@ footer{
     /*Navigation Rules/Header */
     .header{
         border-radius: 10px;
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        /* align-items: center; */
-        margin: 10px;
+        margin: 0px;
+        margin-bottom: 10px;
     }
     
     /*Nav Title*/
@@ -335,30 +338,47 @@ footer{
         margin-left: 10px;
     }
 
-    .mobile_arrow{
-        height: 100%;
-        display: flex;
-        justify-content: flex-end;
-        margin: 0px 10px 0px 0px;
-        padding: 0px;
+    .hamburger{
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 10px;
     }
-    
-    #up_arrow{
-        display: none;
+
+    .bar{
+       background-color: black;
+       width: 24px;
+       height: 3px;
+       margin: 4px 0px;
+       transition: 0.3s;
     }
-    
-    #down_arrow{
-        display: block;
-        font-size: 1.5rem;
-        line-height: 1.5rem;
+
+    .hamburgerTransform #bar1{
+        transform: translate(0, 7px) rotate(45deg);
+    }
+
+    .hamburgerTransform #bar2{
+        opacity: 0;
+    }
+
+    .hamburgerTransform #bar3{
+        transform: translate(0, -7px) rotate(-45deg);
     }
     
     .nav_menu{
-        background-color: green;
+        background-color: lightblue;
+        border-radius: 10px;
         width: 100%;
+        height: 0%;
+        margin-top: 0px;
         display: flex;
         flex-wrap: wrap;
         z-index: 10;
+        transition: 0.3s;
+    }
+
+    .hamburgerTransform .nav_menu{
+        margin-top: 10px;
+        height: 240px;
     }
     
     /*Navigation Links*/
@@ -369,6 +389,14 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: start;
+        height: 0%;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .hamburgerTransform #site_links{
+        opacity: 100;
+        height: 180px;
     }
     
     #site_links li{
@@ -387,11 +415,104 @@ footer{
         width: 100%;
         display: flex;
         justify-content: start;
+        height: 0%;
+        opacity: 0;
+        transition: 0.3s;
     }
+
+    .hamburgerTransform #nav_social{
+        opacity: 100;
+        height: 60px;
+    }
+
     #nav_social img{
         height: 40px;
         width: 40px;
         padding: 0px;
         margin: 10px;
+    }
+
+    #nav_social #last_icon{
+        margin-right: 0px;
+    }
+
+    /*Holds Article Content */
+    .article-box{
+        background-color: teal;
+        padding: 0px;
+        margin: 0px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .arrow{
+        border-radius: 7px;
+        border-style: solid;
+        border-width: 2px;
+        width: 15px;
+        height: 30px;
+        margin: 7px;
+        font-size: 0.6rem;
+    }
+    
+    /*Article CSS */
+    .article{
+        background-color: yellow;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #left_side_article{
+        background-color: white;
+        border-radius: 10px;
+        width: 80%;
+        max-height: 1000px;
+        margin: 10px;
+    }
+    
+    #left_side_article h1{
+        font-size: 1.5rem;
+        margin: 10px 10px;
+    }
+    
+    #left_side_article p{
+        margin: 10px 10px;
+    }
+    
+    .article .button{
+        border-radius: 7px;
+        border-width: 2px;
+        height: 18px;
+        padding: 7px;
+        margin: 15px 15px;
+        font-size: 0.6rem;
+    }
+    
+    #right_side_article{
+        display: inline-flex;
+        justify-content: center;
+        width: 80%;
+        margin: 10px;
+    }
+    
+    #right_side_article img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    /*Footer*/
+    footer{
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100%;
     }
 }

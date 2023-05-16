@@ -7,15 +7,18 @@
     <body>
         <div class="content">
             <header class="header">
+
                 <!--Make Text Interactive Button using JS-->
                 <div id="nav_title">
                     <h2>Grant Matthews</h2>
                 </div>
                 <!--Horizontal List of Navigation Points-->
                 <!--Make Collapsable on Mobile-->
-                <div class="mobile_arrow">
-                    <h2 id="down_arrow">&#9660;</h2>
-                    <h2 id="up_arrow">&#9650;</h2>
+                <script src="scripts/mobile_menu.js" async></script>
+                <div class="hamburger" onclick="hamburgerTransform(this)">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
                 </div>
                 <div class="nav_menu">
                     <ul id="site_links">
