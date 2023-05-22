@@ -191,8 +191,10 @@ body{
     background-color: white;
     border-radius: 25px;
     z-index: 2; /* Needed to place any text/button over the top of any image. Hard to explain in comment */
-    flex: 0 1 40%;
+    flex: 0 1 50%;
     margin: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Rules */
@@ -204,6 +206,8 @@ body{
 /* Main text rules */
 #text_side_article p{
     margin: 25px 25px;
+    overflow: hidden;
+    flex: 0 0 auto;
 }
 
 .article .button{
@@ -214,17 +218,15 @@ body{
 
 #img_side_article{
     background-color: red;
-    display: inline-flex;
-    justify-content: center;
-    flex: 0 2 40%;
-    margin: 24px;
+    flex: 0 1 auto;
+    margin: 25px;
 }
 
 #img_side_article img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
     border-radius: 25px;
-    flex: 0 0 100%;
 }
 
 /*Footer*/
