@@ -8,7 +8,7 @@
 html{
     font-family: rubik, sans-serif;
     font-size: 22px;
-    background-color: lightpink;
+    background-color: rgb(244, 237, 234);
 }
 
 ul{
@@ -20,13 +20,14 @@ body{
     margin:  0px auto;
     padding-top: 1px;
     height: 99.5%; /* 99.5 to account for auto browser padding, again janky but gets the job done */
+    max-height: 1500px;
     display: flex;
     flex-direction: column;
 }
 
 .button{
-    background-color: white;
-    border-color: teal;
+    background-color: rgb(244, 237, 234);
+    border-color: #0074B7;
     border-radius: 10px;
     border-style: solid;
     border-width: 3px;
@@ -37,13 +38,13 @@ body{
 }
 
 .button:hover{
-    background-color: teal;
-    border-color: white;
+    background-color: #0074B7;
+    border-color: rgb(244, 237, 234);
 }
 
 /*Main Content of The Page*/ 
 .content{
-    background-color: white;
+    background-color: #0074B7;
     max-width: 2000px;
     min-height: 800px;
     padding: 25px;
@@ -56,7 +57,7 @@ body{
 
 /*Navigation Rules/Header */
 .header{
-    background-color: blueviolet; /*temporary*/
+    background-color: rgb(244, 237, 234);
     height: 100px;
     border-radius: 25px;
     margin: 25px 25px 25px 25px;
@@ -109,10 +110,10 @@ body{
     color: black;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 #site_links a:hover{
-    color: white;
+    color: #0074B7;
 }
 
 /* Social Links */
@@ -134,7 +135,7 @@ body{
 
 /*Holds Article Content */
 .slideshow{
-    background-color: teal;
+    /* background-color: teal; */
     padding: 0px;
     margin: 25px;
     border-radius: 25px;
@@ -170,12 +171,6 @@ body{
     position: absolute;
     opacity: 0; /*All articles start off with 0 opacity. slideshow.js sets first article to visible using .showSlideX classes below*/
     transition: 0.3s;
-    background-color: green;
-}
-
-/* Rules for a specific article */
-#article1{
-    flex-direction: row-reverse;
 }
 
 /* Rules to show and hide specific articles. There has to be a better way to do this which I will probably figure out at some point */
@@ -188,7 +183,7 @@ body{
 }
 
 #text_side_article{
-    background-color: white;
+    background-color: rgb(244, 237, 234);
     border-radius: 25px;
     z-index: 2; /* Needed to place any text/button over the top of any image. Hard to explain in comment */
     flex: 0 1 50%;
@@ -217,13 +212,12 @@ body{
 }
 
 #img_side_article{
-    background-color: red;
     flex: 0 1 auto;
     margin: 25px;
 }
 
 #img_side_article img{
-    height: 100%;
+    height: 95%; /* Needed to seperate top of image from top of article container for some reason? Need to look into why margins not working in vertical direction*/
     width: 100%;
     object-fit: cover;
     border-radius: 25px;
@@ -240,24 +234,90 @@ footer{
 
 /*Breakpoints*/
 
-/* 1500px Swap To Vertical Article */
+/* 1500px Smaller Text Header and Footer */
 @media only screen and (max-width: 1500px){
-    .article{
-        flex-direction: column-reverse;
+    html{
+        font-size: 14px;
     }
-    #article1{
-        flex-direction: column-reverse;
+
+    .content{
+        padding: 15px;
+        margin: 15px 15px 0px 15px;
+        border-radius: 15px;
     }
+
+    .header{
+        height: 60px;
+        border-radius: 15px;
+        margin: 15px 15px 15px 15px;
+    }
+
+    #nav_title h2{
+        margin-left: 15px;
+    }
+
+    #site_links li{
+        margin: 0px 15px;
+    }
+
+    #nav_social img{
+        height: 36px;
+        width: 36px;
+    }
+
+    #nav_social #last_icon{
+        margin-right: 15px;
+    }
+
+    .slideshow{
+        margin: 15px;
+        border-radius: 15px;
+    }
+
+    .arrow{
+        flex: 0 0 30px;
+        height: 30px;
+    }
+
+    #text_side_article{
+        border-radius: 15px;
+        margin: 15px;
+    }
+
+    #text_side_article h1{
+        margin: 15px 15px;
+    }
+
+    #text_side_article p{
+        margin: 15px 15px;
+    }
+
+    .article .button{
+        height: 30px;
+        padding: 6px;
+        margin: 15px 15px;
+    }
+
+    #img_side_article{
+        margin: 15px;
+    }
+
+    #img_side_article img{
+        border-radius: 15px;
+    }
+
+    footer{
+        height: 36px;
+    }
+
 }
 
 /*Mobile View Breakpoint*/
 @media only screen and (max-width: 1000px){
     html{
-        font-size: 16px;
+        font-size: 14px;
     }
     
-    body{
-    }
     
     /*Main Content of The Page*/ 
     .content{
@@ -383,83 +443,28 @@ footer{
         margin-right: 0px;
     }
 
-    /*Holds Article Content */
-    .slideshow{
-        background-color: teal;
-        padding: 0px;
-        margin: 0px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .arrow{
-        border-radius: 7px;
-        border-style: solid;
-        border-width: 2px;
-        width: 15px;
-        height: 30px;
-        margin: 7px;
-        font-size: 0.6rem;
-    }
-    
-    /*Article CSS */
     .article{
-        background-color: yellow;
-        width: 100%;
-        display: flex;
         flex-direction: column-reverse;
-        justify-content: space-around;
-        align-items: center;
     }
-    
-    #text_side_article{
-        background-color: white;
-        border-radius: 10px;
-        width: 80%;
-        max-height: 1000px;
-        margin: 10px;
-    }
-    
-    #text_side_article h1{
-        font-size: 1.5rem;
-        margin: 10px 10px;
-    }
-    
-    #text_side_article p{
-        margin: 10px 10px;
-    }
-    
-    .article .button{
-        border-radius: 7px;
-        border-width: 2px;
-        height: 18px;
-        padding: 7px;
-        margin: 15px 15px;
-        font-size: 0.6rem;
-    }
-    
+
     #img_side_article{
-        display: inline-flex;
-        justify-content: center;
-        width: 80%;
-        margin: 10px;
+        background-color: red;
+        height: 300px; /* I have to be an idiot cause I have NO IDEA why this is needed to make image resizing work properly*/
+        flex: 1 1 auto;
+        margin: 0px;
+        padding: 0px;
     }
     
     #img_side_article img{
         height: 100%;
         width: 100%;
-        border-radius: 10px;
+        object-fit: cover;
+        margin: 0px;
+        padding: 0px;
+        /* display: none; */
     }
-    
-    /*Footer*/
-    footer{
-        background-color: yellow;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        width: 100%;
+
+    #text_side_article{
+        flex: 0 0 auto;
     }
 }
