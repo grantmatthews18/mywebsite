@@ -16,32 +16,53 @@ ul{
 }
 
 body{
-    background-color: green;
     max-width: 2050px;
-    max-height: 100vh;
     margin:  0px auto;
+    padding-top: 1px;
+    height: 99.5%; /* 99.5 to account for auto browser padding, again janky but gets the job done */
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    background-color: white;
+    border-color: teal;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: teal;
+    border-color: white;
 }
 
 /*Main Content of The Page*/ 
 .content{
+    background-color: white;
     max-width: 2000px;
+    min-height: 800px;
     padding: 25px;
     margin: 25px 25px 0px 25px;
-    background-color: white;
     border-radius: 25px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /*Navigation Rules/Header */
-
 .header{
     background-color: blueviolet; /*temporary*/
     height: 100px;
-    max-width: 1950px;
     border-radius: 25px;
+    margin: 25px 25px 25px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 25px 25px 25px 25px;
     z-index: 10;
 }
 
@@ -58,6 +79,7 @@ body{
     margin-left: 25px;
 }
 
+/* Mobile Hamburger Menu Icon. Only visible when width is <1000 */
 .hamburger{
     display: none;
 }
@@ -65,12 +87,13 @@ body{
 .bar{
 }
 
+/* Container for site links and social links. Largely useless for desktop display */
 .nav_menu{
     flex-grow: 3;
     display: flex;
 }
 
-/*Navigation Links*/
+/*Site Navigation Links*/
 #site_links{
     flex-grow: 2;
     padding: 0px;
@@ -79,16 +102,17 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 #site_links li{
     margin: 0px 25px;
 }
-
 #site_links a{
     color: black;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 300;
+}
+#site_links a:hover{
+    color: white;
 }
 
 /* Social Links */
@@ -103,203 +127,124 @@ body{
     padding: 0px;
     margin: 0px 0.25rem;
 }
-
+/* Need to push icons in 25px from right side of header bar */
 #nav_social #last_icon{
     margin-right: 25px;
 }
 
 /*Holds Article Content */
-.article-box{
+.slideshow{
     background-color: teal;
     padding: 0px;
-    margin: 50px;
+    margin: 25px;
     border-radius: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex: 1 1 auto;
 }
 
+/* Specific styling for buttons to scroll articles left and right */
 .arrow{
-    background-color: white;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 3px;
-    border-color: teal;
-    width: 25px;
+    flex: 0 0 50px;
     height: 50px;
     margin: 10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/*Article CSS */
+/* Box that holds all articles */
+.article-box{
+    flex: 1 1 auto;
+    height: 100%;
+    position: relative;
+}
+
+ 
 .article{
-    background-color: yellow;
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0; /*All articles start off with 0 opacity. slideshow.js sets first article to visible using .showSlideX classes below*/
+    transition: 0.3s;
+    background-color: green;
 }
 
-#left_side_article{
+/* Rules for a specific article */
+#article1{
+    flex-direction: row-reverse;
+}
+
+/* Rules to show and hide specific articles. There has to be a better way to do this which I will probably figure out at some point */
+.showSlide1 #article1{
+    opacity: 100;
+}
+
+.showSlide2 #article2{
+    opacity: 100;
+}
+
+#text_side_article{
     background-color: white;
     border-radius: 25px;
-    width: 40%;
-    max-height: 1000px;
+    z-index: 2; /* Needed to place any text/button over the top of any image. Hard to explain in comment */
+    flex: 0 1 40%;
+    margin: 25px;
 }
 
-#left_side_article h1{
+/* Header Rules */
+#text_side_article h1{
     font-size: 3rem;
     margin: 25px 25px;
 }
 
-#left_side_article p{
+/* Main text rules */
+#text_side_article p{
     margin: 25px 25px;
 }
 
 .article .button{
-    background-color: white;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 3px;
-    border-color: teal;
-    display: inline-flex;
-    align-items: center;
     height: 30px;
     padding: 10px;
     margin: 25px 25px;
 }
 
-#right_side_article{
+#img_side_article{
+    background-color: red;
     display: inline-flex;
     justify-content: center;
-    width: 40%;
+    flex: 0 2 40%;
+    margin: 24px;
 }
 
-#right_side_article img{
-    height: 900px;
+#img_side_article img{
+    height: 100%;
+    width: 100%;
     border-radius: 25px;
+    flex: 0 0 100%;
 }
 
 /*Footer*/
 footer{
-    background-color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 50px;
     width: 100%;
 }
 
 /*Breakpoints*/
 
-@media only screen and (max-width: 1650px) {
-    #p2{
-        display: none;
+/* 1500px Swap To Vertical Article */
+@media only screen and (max-width: 1500px){
+    .article{
+        flex-direction: column-reverse;
     }
-
-    #right_side_article img{
-        height: 750px;
-    }
-}
-
-@media only screen and (max-width: 1450px) {
-    #left_side_article h1{
-        font-size: 2.4rem;
-    }
-    #left_side_article p{
-        font-size: 0.8rem;
-    }
-    
-    #p2{
-        display: none;
-    }
-
-    #right_side_article img{
-        height: 600px;
-    }
-}
-
-/*Major Breakpoint - Resizing The Header and Article Box(es) */
-@media only screen and (max-width: 1250px) {
-    .content{
-        padding: 15px;
-        margin: 15px 15px 0px 15px;
-        border-radius: 15px;
-    }
-    
-    .header{
-        height: 60px;
-        border-radius: 15px;
-        margin: 15px 15px 15px 15px;
-    }
-
-    #nav_title h2{
-        font-size: 1rem;
-        font-weight: 500;
-        margin-left: 15px;
-    }
-    
-    #site_links li{
-        margin: 0px 15px;
-    }
-    
-    #site_links a{
-        font-size: 0.9rem;
-        font-weight: 400;
-    }
-    
-    #nav_social img{
-        height: 36px;
-        width: 36px;
-        padding: 0px;
-        margin: 0px 0.25rem;
-    }
-    
-    #nav_social #last_icon{
-        margin-right: 15px;
-    }
-    .article-box{
-        margin: 30px;
-        border-radius: 15px;
-    }
-    
-    .arrow{
-        border-radius: 7px;
-        border-style: solid;
-        border-width: 2px;
-        width: 15px;
-        height: 30px;
-        margin: 7px;
-        font-size: 0.6rem;
-    }
-    
-    #left_side_article{
-        border-radius: 15px;
-    }
-    
-    #left_side_article h1{
-        margin: 15px 15px;
-    }
-    
-    #left_side_article p{
-        margin: 15px 15px;
-    }
-    
-    .article .button{
-        border-radius: 7px;
-        border-width: 2px;
-        height: 18px;
-        padding: 7px;
-        margin: 15px 15px;
-        font-size: 0.6rem;
-    }
-    
-    #right_side_article img{
-        height: 500px;
-        border-radius: 15px;
+    #article1{
+        flex-direction: column-reverse;
     }
 }
 
@@ -437,7 +382,7 @@ footer{
     }
 
     /*Holds Article Content */
-    .article-box{
+    .slideshow{
         background-color: teal;
         padding: 0px;
         margin: 0px;
@@ -467,7 +412,7 @@ footer{
         align-items: center;
     }
     
-    #left_side_article{
+    #text_side_article{
         background-color: white;
         border-radius: 10px;
         width: 80%;
@@ -475,12 +420,12 @@ footer{
         margin: 10px;
     }
     
-    #left_side_article h1{
+    #text_side_article h1{
         font-size: 1.5rem;
         margin: 10px 10px;
     }
     
-    #left_side_article p{
+    #text_side_article p{
         margin: 10px 10px;
     }
     
@@ -493,14 +438,14 @@ footer{
         font-size: 0.6rem;
     }
     
-    #right_side_article{
+    #img_side_article{
         display: inline-flex;
         justify-content: center;
         width: 80%;
         margin: 10px;
     }
     
-    #right_side_article img{
+    #img_side_article img{
         height: 100%;
         width: 100%;
         border-radius: 10px;
