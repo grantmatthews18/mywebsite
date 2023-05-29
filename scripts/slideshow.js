@@ -1,4 +1,4 @@
-let totalSlides = 2;
+let totalSlides = 3;
 let currSlide = 1;
 
 //This is janky af but it technically works so I am leaving it

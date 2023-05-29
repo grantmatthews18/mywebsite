@@ -1,0 +1,273 @@
+<html>
+    <head>
+        <title>Projects - Grant Matthews</title>
+        <!-- Need to figure out and split site_style from home.css -->
+        <link rel="stylesheet" type="text/css" href="style/site_style.css">
+        <link rel="stylesheet" type="text/css" href="style/projects.css">
+    </head>
+    <body>
+        <div class="content">
+            <header class="header">
+                <div id="nav_title">
+                    <a href="index.html"><h2>Grant Matthews</h2></a>
+                </div>
+                <script src="scripts/mobile_menu.js" async></script>
+                <div class="hamburger" onclick="hamburgerTransform(this)">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                </div>
+                <div class="nav_menu">
+                    <ul id="site_links">
+                        <!--May need to change these links-->
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>   
+                    <div id="nav_social">
+                        <a href="https://www.linkedin.com/in/grant-matthews-7033ba150/" target="_blank"><div class="header_icon" id="linkedin_icon"></div></a>
+                        <a href="https://github.com/grantmatthews18" target="_blank"><div class="header_icon" id="github_icon"></div></a>
+                        <a href="https://www.instagram.com/grantmatthews18/" target="_blank"><div class="header_icon" id="instagram_icon"></div></a>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Content Here -->
+            <div class="article_holder">
+                <article class="article" id="gesture_recognition">
+                    <div class="text_article">
+                        <h1>Gesture Recognition</h1>
+                        <h2>Gesture Recognition using the HOG Algorithm</h2>
+                        <p>One of the final projects I completed as part of my University of Minnesota coursework was OpenGesture, a hand gesture recognition system with the goal of being operable on any home user computer. To accomplish this goal, myself and another member of the class used the Scale-Invarient-Feature-Transformation (SIFT) feature matching algorithm to match images captured by the user’s webcam with images used by the user to set a gesture. This had the advantage of allowing the user to create virtually limitless gestures, including those that involved objects, facial expressions and more. </p>
+                        <p>We chose SIFT feature extraction due to its relatively lightweight approach to gathering features for matching, allowing it to run without the help of a GPU or dedicated image processing hardware. </p>
+                        <p>To see the report and github repository visit one of the links below.</p>
+                        <div class="button_container">
+                            <a href="about.html">
+                                <div class="button" id="read_more_me">
+                                    <h5>Read More</h5>
+                                </div>
+                            </a>
+                            <a href="contact.html">
+                                <div class="button" id="contact_me">
+                                    <h5>Contact Me</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+                <article class="article reverse_article" id="auto_wordle">
+                    <div class="text_article">
+                        <h1>Auto Wordle</h1>
+                        <h2>An Genetic Evolution Algorithm to Solve Wordle Puzzles</h2>
+                        <p>Having enjoyed the then newly popular Wordle puzzle game, I decided to create and implement a simple Artificial Intelligence Model capable of solving these puzzles with the goal of beating the average human player. I developed 2 algorithms, both with similar success levels, slightly beating an average human player and learned a lot along the way.</p>
+                        <p>The first algorithm implemented both genetic evolution and the minimax algorithm. Described in more detail in the linked report, the basics of the algorithm are as follows:</p>
+                        <ol>
+                            <li>Build a generation of 100 agents, each of which solve a standard test set of puzzles.</li>
+                            <li>Each possible guess is given a set of descriptors, and each agent has (initially random) different modifiers to those descriptors, thus deciding what descriptors are most important to consider when considering a guess</li>
+                            <li>Each agent uses the minimax algorithm to check possible future game states from each possible guess and chooses the most favorable guess.</li>
+                            <li>This is repeated over multiple generations, with each new generation being a product of the best agents from the previous generation.</li>
+                        </ol>
+                        <p>This algorithm was slightly more successful than an average human player, so experiment two tested if the minimax algorithm was even needed, or if simply guessing the word with the highest assigned weight would work instead. The results of these experiments and more information about the algorithm can be found in the linked report. The github repository containing all of the source code can also be found below.</p>
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+                <article class="article" id="drone_search">
+                    <div class="text_article">
+                        <h1>Drone Search and Rescue</h1>
+                        <h2>Collaborative Group Project to Simulate Drone Search and Rescue</h2>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+                <article class="article reverse_article" id="bash_shell">
+                    <div class="text_article">
+                        <h1>Bash Shell</h1>
+                        <h2>Replica Bash Shell for Unix Systems</h2>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+                <article class="article" id="portfolio_website">
+                    <div class="text_article">
+                        <h1>Portfolio Website</h1>
+                        <h2>Responsive Website using HTML, CSS and Javascript</h2>
+                        <p>During my time at the University of Minnesota, my coursework primarily focused on back-end development and AI algorithm creation. As a result, my involvement in web development has been relatively limited since my high school years. Nonetheless, I acknowledged the importance of acquiring a thorough understanding of how web development operates and how it relates to my primary areas of interest.</p>
+                        <p>In the months following my graduation in December 2022, I embarked on a self-guided journey to learn HTML, CSS, JavaScript, and eventually React and database integration. Through practice and enrollment in multiple online courses, I have been teaching myself these web development technologies. One of my goals was to have a functional portfolio website by Summer 2023. To achieve this objective, I have developed this website from scratch, opting to write all the HTML, CSS style sheets, and JavaScript scripts myself instead of relying on pre-existing libraries. By taking this approach, I not only accomplished my goal but also ensured a profound grasp of the fundamental aspects of web development. This, in turn, enables me to better comprehend and engage with more advanced concepts as I encounter them in the future.</p>
+                        <p>For a complete copy of this website's code, please refer to my GitHub repository linked below.</p>
+                        <!-- ADD A BUTTON FOR GITHUB -->
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+                <article class="article reverse_article" id="my_server">
+                    <div class="text_article">
+                        <h1>My Server</h1>
+                        <h2>A Personal Home Server for Mass Storage, Serving Media and Hosting Webpages and Tools</h2>
+                        <p>As I became more interested in photography (read more below) and began to amass large raw photos, I recognized the need for a storage solution capable of storing everything I had already with the ability to be expanded to store more in the future. While there exists a lot of good Network Attached Storage devices, I desired something with more power and expandability. After some research I decided on a server running UnRAID. While I didn’t know it at the time, my server has grown to be much more than just a file storage system, and has become an integral part of my daily life.</p>
+                        <p>Alongside file storage, my server now runs multiple docker containers, each with their own unique purpose. Some of the most used include</p>
+                        <ul>
+                            <li><h5>Plex:</h5> A media delivery platform often described as a self hosted Netflix.</li>
+                            <li><h5>Radarr and Sonarr:</h5> A media grabbing tool for the automation of finding, downloading and organizing new media releases.</li>
+                            <li><h5>LetsEncrypt:</h5> A reverse proxy service to enable the safe and secure hosting of web pages like this one (which is being hosted on said server).</li>
+                            <li><h5>ApacheGuacamole:</h5> A webpage based VNC/remote desktop client for accessing machines on my local network from outside of the network safely.</li>
+                            <li><h5>Nextcloud:</h5> A self hosted cloud storage platform, like Onedrive or Google Drive.</li>
+                            <li><h5>Various Game Servers</h5></li>
+                        </ul>
+                        <p>The server has been through multiple hardware iterations since its inception, including being custom watercooled, but I have settled on a power sipping 11th Gen i5 with integrated graphics (for extremely efficient media transcoding). Expansion slots are taken up by an LSI 9207-8i SAS card and a Mellanox Connect-X3 10-gigabit card.</p>
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+                <article class="article" id="my_router">
+                    <div class="text_article">
+                        <h1>Router and Home Network</h1>
+                        <h2>Replacement for a Tradional Home Router running Pfsense</h2>
+                        <p>Motivated by dissatisfaction with the limited options and functionalities offered by off-the-shelf home routers/access points, I embarked on the endeavor of constructing my own solution. My aim was to create a more robust and feature-rich system that could establish improved connectivity with other devices on my network. After conducting thorough research, I opted to build a router utilizing standard PC components housed in a 2U case, operating on pfSense—an open-source router/dns/firewall operating system—alongside a Ubiquiti access point for wireless connectivity.</p>
+                        <p>The initial conception of this project arose during a period when I shared living space with six roommates. In such an environment, I desired the ability to segregate my server and personal devices from those of the other network users. Additionally, it was crucial to establish a clear separation between guest devices and the devices owned by the occupants of our house. With pfSense, I found a suitable solution that facilitated the creation of multiple VLANs, each with its own distinct IP address pool, effectively isolating network traffic. Moreover, by constructing a custom solution, I was able to implement 10-gigabit networking between my primary desktop, router, and server, thereby significantly enhancing file transfer speeds. Furthermore, pfSense afforded me control over open ports to the wider internet, enabling the secure hosting of webpages, including the one you are currently accessing.</p>
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+                <article class="article reverse_article" id="photography">
+                    <div class="text_article">
+                        <h1>Photography</h1>
+                        <h2>Capturing and Sharing the Twin Cities and More</h2>
+                        <p>During my Freshman year of College and the year before the Covid-19 pandemic I discovered a passion for photography, specifically photography of cityscapes. During this year I ran a successful Instagram page with the goal of posting a different photo every 2 days. While my photography mainly focused on capturing the Twin Cities of Minneapolis and St. Paul, I did get the opportunity to travel and share some beautiful photos from cities such as New York, Chicago and Washington D.C.</p>
+                        <p>I also had the opportunity to showcase my work at a University sponsored art festival and at a local coffee shop. Furthermore, I sold prints of some of my photos to members of the local community.</p>
+                        <p>During this time Minneapolis and the surrounding area was also shook by the death of George Floyd and the ensuing protests. I was able to use my photographic skills to capture moments from these protests, peaceful and violent, which helped me and others around me grasp the full brevity of the situation and understand the feelings of those more directly afflicted.</p>
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+                <article class="article" id="my_computer">
+                    <div class="text_article">
+                        <h1>My Computer(s)</h1>
+                        <h2>My Custom PC Buidling Hobby and Business</h2>
+                        <p>Building custom computers has been a long-standing passion of mine, stemming from the moment I assembled my first Gaming PC at the age of 15. While my interest in computer gaming, particularly playing with friends, has undoubtedly played a role, my enthusiasm for custom PC building extends far beyond mere gaming purposes. Since 2015, my personal computer(s) have undergone numerous iterations, each one distinct and increasingly intricate in design.</p>
+                        <p>In recent years, I have undertaken the creation of multiple custom water-cooled systems, with a penchant for employing hard tubing. This choice not only yields visually captivating systems but also ensures optimal cooling performance. The combination of aesthetics and efficient cooling has become a hallmark of my builds.</p>
+                        <p>During the course of the pandemic, the availability of Graphics Cards, an essential component for running video games, was severely constrained. Capitalizing on this situation, I seized the opportunity to establish a small-scale PC building enterprise. By sourcing reasonably priced components, both new and used, I meticulously integrated them into systems that I then sold at a fair and affordable price point. This endeavor allowed me to cater to the needs of those seeking high-quality PC setups despite the challenging market conditions.</p>
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+                <article class="article reverse_article" id="my_car">
+                    <div class="text_article">
+                        <h1>My Honda Civic</h1>
+                        <h2>Daily Driver and Ongoing Project</h2>
+                        <p>My 2012 Honda Civic Si has been a captivating project and a source of daily gratification since its acquisition in early 2020. My interest in automobiles was sparked by my father, Jeff, who dedicated his career to engineering engines and power systems for prominent Fortune 500 companies. This vehicle, along with his own collection of vehicles and motorcycle, has become a remarkable avenue for bonding and spending quality time together in recent years.</p>
+                        <p>In addition to meticulously carrying out all standard maintenance procedures, I have undertaken several modifications to enhance the car's performance and driving experience. These modifications include the installation of a new suspension kit, which imparts a more assertive stance and improved handling characteristics. Furthermore, I have replaced the clutch and installed a lighter flywheel, resulting in heightened torque output and enhanced overall performance. Moreover, an aftermarket head unit and stereo system have been integrated to augment the daily driving experience. These modifications aim to optimize various aspects of the vehicle's functionality.</p>
+                        <p>With my unwavering dedication to this project, I intend to continue modifying and refining the vehicle in the future. By pursuing further enhancements, I aspire to establish a distinct and customized identity for my car.</p>
+                    </div>
+                    <div class="image_article">
+                        <div class="image_main">
+
+                        </div>
+                        <div class="image_box image_2">
+
+                        </div>
+                        <div class="image_box image_3">
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+
+        </div>
+        
+        <footer>
+            <h4>Grant Matthews</h4>
+        </footer>
+
+    </body>
+</html>
