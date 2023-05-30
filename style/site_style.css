@@ -30,6 +30,13 @@ body{
     flex-direction: column;
 }
 
+.button_container{
+    height: auto;
+    margin: 25px;
+    display: flex;
+    justify-content: end;
+}
+
 .button{
     background-color: #f4edea;
     border-color: #0074B7;
