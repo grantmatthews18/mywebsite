@@ -9,8 +9,10 @@ body{
 }
 
 .article{
+    background-color: red;
     flex: 1 1 auto;
-    margin: 1rem;
+    height: 45rem;
+    margin: 2rem;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -82,19 +84,19 @@ body{
 .image_box{
     border-radius: 1rem;
     overflow: hidden;
+    min-height: 0;
+    height: 100%;
+}
+
+.image_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Gesture Project Image Rules */
-.gesture_image_box{
-    height: 0;
-    min-height: 80%;
-}
-
 .gesture_image_box img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: left;
+    /* object-position: left; */
 }
 
 /* Wordle Project Image Rules */
@@ -102,7 +104,6 @@ body{
     background-color: #0074B7;
     border-radius: 1rem;
     display: flex;
-    /* Will definitely need to adjust this for responsive design */
     height: 24rem; 
 }
 
@@ -135,41 +136,13 @@ body{
 }
 
 /* Website Image Rules */
-.website_image_box{
-    min-height: 0;
-    height: 80%;
-}
-
 .website_image_box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     object-position: left;
 }
 
 /* My Server Image Rules */
-.server_image_box{
-    min-height: 0;
-    height: 80%;
-}
-
 .server_image_box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     object-position: left;
-}
-
-/* My Car Image Rules */
-.car_image_box{
-    min-height: 0;
-    height: 80%;
-}
-
-.car_image_box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 
@@ -181,5 +154,14 @@ body{
 
 /*Mobile View Breakpoint*/
 @media only screen and (max-width: 1000px){
-   
+   .article{
+        flex-direction: column-reverse;
+        height: auto;
+   }
+
+   .image_box img{
+        height: 20rem;
+        width: 100%;
+   }
+
 }

@@ -199,7 +199,7 @@ footer{
 /*Mobile View Breakpoint*/
 @media only screen and (max-width: 1000px){
     html{
-        font-size: 14px;
+        font-size: 22px;
     }
     
     
@@ -256,7 +256,7 @@ footer{
     }
     
     .nav_menu{
-        background-color: lightblue;
+        background-color: #BFD7ED;
         border-radius: 10px;
         width: 100%;
         height: 0%;
