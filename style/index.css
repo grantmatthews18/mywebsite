@@ -1,9 +1,9 @@
 /*Holds Article Content */
 .slideshow{
     /* background-color: teal; */
-    padding: 0px;
-    margin: 25px;
-    border-radius: 25px;
+    padding: 0;
+    margin: 1rem;
+    border-radius: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,9 +12,9 @@
 
 /* Specific styling for buttons to scroll articles left and right */
 .arrow{
-    flex: 0 0 50px;
-    height: 50px;
-    margin: 10px;
+    flex: 0 0 2rem;
+    height: 2rem;
+    margin: .4rem;
 }
 
 /* Box that holds all articles */
@@ -53,10 +53,10 @@
 
 #text_side_article{
     background-color: rgb(244, 237, 234);
-    border-radius: 25px;
+    border-radius: 1rem;
     z-index: 2; /* Needed to place any text/button over the top of any image. Hard to explain in comment */
     flex: 0 1 50%;
-    margin: 25px 50px 25px 50px;
+    margin: 1rem 2rem;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -65,7 +65,7 @@
 /* Header Rules */
 .h1_bottom{
     font-size: 3rem;
-    margin: 125px 25px 0px 25px;
+    margin: 5rem 1rem 0 1rem;
 }
 
 .h1_top{
@@ -74,15 +74,15 @@
     font-size: 4rem;
     font-weight: 500;
     color: #f4edea;
-    padding: 25px;
-    border-radius: 25px;
-    top: -100px;
-    left: -25px;
+    padding: 1rem;
+    border-radius: 1rem;
+    top: -4rem;
+    left: -1rem;
 }
 
 /* Main text rules */
 #text_side_article p{
-    margin: 25px 25px;
+    margin: 1rem 1rem;
     overflow: hidden;
     flex: 0 1 50%;
 }
@@ -91,9 +91,9 @@
     background-color: #0074B7;
     border-color: #0074B7;
     color: #f4edea;
-    height: 30px;
+    height: 1.2rem;
     padding: 10px;
-    margin-left: 25px;
+    margin-left: 1rem;
 }
 
 .article .button:hover{
@@ -104,63 +104,27 @@
 
 .button_container{
     height: auto;
-    margin: 25px;
+    margin: 1rem;
     display: flex;
     justify-content: end;
 }
 
 #img_side_article{
     flex: 0 1 50%;
-    margin: 25px;
+    margin: 1rem;
 }
 
 #img_side_article img{
     height: 95%; /* Needed to seperate top of image from top of article container for some reason? Need to look into why margins not working in vertical direction*/
     width: 100%;
     object-fit: cover;
-    border-radius: 25px;
+    border-radius: 1rem;
 }
 
 /*Breakpoints*/
 
 /* 1500px Smaller Text Header and Footer */
 @media only screen and (max-width: 1500px){
-    .slideshow{
-        margin: 15px;
-        border-radius: 15px;
-    }
-
-    .arrow{
-        flex: 0 0 30px;
-        height: 30px;
-    }
-
-    #text_side_article{
-        border-radius: 15px;
-        margin: 15px;
-    }
-
-    #text_side_article h1{
-        margin: 15px 15px;
-    }
-
-    #text_side_article p{
-        margin: 15px 15px;
-    }
-
-    .article .button{
-        height: 30px;
-        padding: 6px;
-        margin: 15px 15px;
-    }
-
-    #img_side_article{
-        margin: 15px;
-    }
-
-    #img_side_article img{
-        border-radius: 15px;
-    }
 
 }
 

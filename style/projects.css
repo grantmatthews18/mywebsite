@@ -10,8 +10,7 @@ body{
 
 .article{
     flex: 1 1 auto;
-    margin: 25px;
-    /* min-height: 1000px; */
+    margin: 1rem;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -24,9 +23,9 @@ body{
 
 .text_article{
     background-color: #f4edea;
-    border-radius: 25px;
-    margin: 25px;
-    margin-top: 50px;
+    border-radius: 1rem;
+    margin: 1rem;
+    margin-top: 2rem;
     position: relative;
     top: 0;
     left: 0;
@@ -40,18 +39,18 @@ body{
     font-size: 2rem;
     font-weight: 500;
     color: #f4edea;
-    padding: 25px;
-    border-radius: 25px;
-    top: -75px;
-    left: -25px;
+    padding: 1rem;
+    border-radius: 1rem;
+    top: -3rem;
+    left: -1rem;
 }
 
 .text_article h2{
-    margin: 75px 25px 25px 25px;
+    margin: 3.5rem 1rem 1rem 1rem;
 }
 
 .text_article p{
-    margin: 25px 25px;
+    margin: 1rem;
 }
 
 .text_article h5{
@@ -63,9 +62,9 @@ body{
     background-color: #0074B7;
     border-color: #0074B7;
     color: #f4edea;
-    height: 30px;
-    padding: 10px;
-    margin-left: 25px;
+    height: 1.2rem;
+    padding: .66rem;
+    margin-left: 1rem;
 }
 
 .button:hover{
@@ -75,18 +74,112 @@ body{
 
 .image_article{
     flex: 0 1 50%;
-    margin: 25px;
+    margin: 1rem;
     align-self: center;
+    min-width: 0;
 }
 
 .image_box{
-    border-radius: 25px;
+    border-radius: 1rem;
     overflow: hidden;
 }
 
-.image_article img{
-    /* height: 100%; */
+/* Gesture Project Image Rules */
+.gesture_image_box{
+    height: 0;
+    min-height: 80%;
+}
+
+.gesture_image_box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+/* Wordle Project Image Rules */
+.wordle_image_article{
+    background-color: #0074B7;
+    border-radius: 1rem;
+    display: flex;
+    /* Will definitely need to adjust this for responsive design */
+    height: 24rem; 
+}
+
+.wordle_image_box{
+    flex: 1 1 25%;
+    margin: -2rem;
+}
+
+#wordle_image_box_1{
+    margin-left: -1rem;
+    align-self: start;
+}
+
+#wordle_image_box_2{
+    align-self: end;
+}
+
+#wordle_image_box_3{
+    align-self: start;
+}
+
+#wordle_image_box_4{
+    margin-right: -1rem;
+    align-self: end;
+}
+
+.wordle_image_box img{
     width: 100%;
     object-fit: cover;
 }
 
+/* Website Image Rules */
+.website_image_box{
+    min-height: 0;
+    height: 80%;
+}
+
+.website_image_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+/* My Server Image Rules */
+.server_image_box{
+    min-height: 0;
+    height: 80%;
+}
+
+.server_image_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+/* My Car Image Rules */
+.car_image_box{
+    min-height: 0;
+    height: 80%;
+}
+
+.car_image_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*Breakpoints*/
+
+/* 1500px Smaller Text Header and Footer */
+@media only screen and (max-width: 1500px){
+}
+
+/*Mobile View Breakpoint*/
+@media only screen and (max-width: 1000px){
+   
+}
