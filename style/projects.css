@@ -9,10 +9,12 @@ body{
 }
 
 .article{
-    background-color: red;
+    background-color: #60A3D9;
     flex: 1 1 auto;
-    height: 45rem;
-    margin: 2rem;
+    height: fit-content;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -58,6 +60,14 @@ body{
 .text_article h5{
     font-size: 1rem;
     display: inline;
+}
+
+ul{
+    margin: 1rem;
+}
+
+ol{
+    margin: 1rem;
 }
 
 .button{

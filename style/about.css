@@ -1,10 +1,9 @@
 .article{
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     margin: 1rem;
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: red;
     padding: 0;
 }
 
@@ -55,4 +54,36 @@
     height: 95%;
     width: 100%;
     object-fit: cover;
+}
+
+/*Mobile View Breakpoint*/
+@media only screen and (max-width: 1000px){
+    body{
+        max-height: none;
+        height: auto;
+    }
+
+    .article{
+        flex-direction: column-reverse;
+    }
+
+    #img_side_article{
+        height: 300px; /* I have to be an idiot cause I have NO IDEA why this is needed to make image resizing work properly*/
+        flex: 1 1 auto;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #img_side_article img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        margin: 0px;
+        padding: 0px;
+        /* display: none; */
+    }
+
+    #text_side_article{
+        flex: 0 0 auto;
+    }
 }
