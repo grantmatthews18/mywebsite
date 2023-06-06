@@ -104,11 +104,6 @@ ol{
     object-fit: cover;
 }
 
-/* Gesture Project Image Rules */
-.gesture_image_box img{
-    /* object-position: left; */
-}
-
 /* Wordle Project Image Rules */
 .wordle_image_article{
     background-color: #0074B7;
