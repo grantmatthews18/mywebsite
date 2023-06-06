@@ -1,0 +1,329 @@
+/* Importing Fonts */
+@font-face {
+    font-family: 'rubik';
+    src: url(../media/fonts/Rubik-VariableFont_wght.ttf) format('truetype');
+}
+
+/* Generic Rules */
+html{
+    font-family: rubik, sans-serif;
+    font-size: 22px;
+    background-color: #f4edea;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+body{
+    max-width: 2050px;
+    margin:  0px auto;
+    padding-top: 1px;
+    height: 99.5%; /* 99.5 to account for auto browser padding, again janky but gets the job done */
+    max-height: 1500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button_container{
+    height: auto;
+    margin: 1rem;
+    display: flex;
+    justify-content: end;
+}
+
+.button{
+    background-color: #f4edea;
+    border-color: #0074B7;
+    color: #0074B7;
+    border-radius: .4rem;
+    border-style: solid;
+    border-width: 3px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #0074B7;
+    color: #f4edea;
+}
+
+/*Main Content of The Page*/ 
+.content{
+    background-color: #003B73;
+    max-width: 2000px;
+    min-height: 1100px;
+    padding: 1rem;
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 1rem;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Navigation Rules/Header */
+.header{
+    background-color: #f4edea;
+    height: 4rem;
+    border-radius: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+/*Nav Title*/
+#nav_title{
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+#nav_title h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+#nav_title h2:hover{
+    color: #0074B7;
+}
+
+/* Mobile Hamburger Menu Icon. Only visible when width is <1000 */
+.hamburger{
+    display: none;
+}
+
+.bar{
+}
+
+/* Container for site links and social links. Largely useless for desktop display */
+.nav_menu{
+    flex-grow: 3;
+    display: flex;
+}
+
+/*Site Navigation Links*/
+#site_links{
+    flex-grow: 2;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#site_links li{
+    margin: 0 1rem;
+}
+#site_links a{
+    font-size: 1rem;
+    font-weight: 400;
+}
+#site_links a:hover{
+    color: #0074B7;
+}
+
+/* Social Links */
+#nav_social{
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
+
+.header_icon{
+    height: 2.4rem;
+    width: 2.4rem;
+    padding: 0;
+    margin: 0 0.25rem;
+}
+
+#linkedin_icon{
+    background-image: url("../media/icons/linkedin.png");
+    background-size: contain;
+}
+
+#linkedin_icon:hover{
+    background-image: url("../media/icons/linkedin-blue.png");
+}
+
+#github_icon{
+    background-image: url("../media/icons/github.png");
+    background-size: contain;
+}
+
+#github_icon:hover{
+    background-image: url("../media/icons/github-blue.png");
+}
+
+#instagram_icon{
+    background-image: url("../media/icons/instagram.png");
+    background-size: contain;
+    margin-right: 1rem; /*Pushes group 1rem from the right edge of header since this is last icon*/
+}
+
+#instagram_icon:hover{
+    background-image: url("../media/icons/instagram-blue.png");
+}
+
+/* Need to push icons in 1rem from right side of header bar */
+#nav_social #last_icon{
+    margin-right: 1rem;
+}
+
+/*Footer*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 100%;
+}
+
+/*Breakpoints*/
+
+/* 1500px Smaller Text Header and Footer */
+@media only screen and (max-width: 1500px){
+    html{
+        font-size: 14px;
+    }
+}
+
+/*Mobile View Breakpoint*/
+@media only screen and (max-width: 1000px){
+    html{
+        font-size: 14px;
+    }
+    
+    
+    /*Main Content of The Page*/ 
+    .content{
+        padding: 10px;
+        margin: 10px 10px 0px 10px;
+        border-radius: 10px;
+    }
+    
+    /*Navigation Rules/Header */
+    .header{
+        border-radius: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    
+    /*Nav Title*/
+    #nav_title{
+    }
+    
+    #nav_title h2{
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-left: 10px;
+    }
+
+    .hamburger{
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .bar{
+       background-color: black;
+       width: 24px;
+       height: 3px;
+       margin: 4px 0px;
+       transition: 0.3s;
+    }
+
+    .hamburgerTransform #bar1{
+        transform: translate(0, 7px) rotate(45deg);
+    }
+
+    .hamburgerTransform #bar2{
+        opacity: 0;
+    }
+
+    .hamburgerTransform #bar3{
+        transform: translate(0, -7px) rotate(-45deg);
+    }
+    
+    .nav_menu{
+        background-color: lightblue;
+        border-radius: 10px;
+        width: 100%;
+        height: 0%;
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 10;
+        transition: 0.3s;
+    }
+
+    .hamburgerTransform .nav_menu{
+        margin-top: 10px;
+        height: 240px;
+    }
+    
+    /*Navigation Links*/
+    #site_links{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        height: 0%;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .hamburgerTransform #site_links{
+        opacity: 100;
+        height: 180px;
+    }
+    
+    #site_links li{
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    
+    #site_links a{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    
+    /* Social Links */
+    #nav_social{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        height: 0%;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .hamburgerTransform #nav_social{
+        opacity: 100;
+        height: 60px;
+    }
+
+    .header_icon{
+        height: 40px;
+        width: 40px;
+        padding: 0px;
+        margin: 10px;
+    }
+
+    #nav_social #last_icon{
+        margin-right: 0px;
+    }
+}

@@ -1,0 +1,156 @@
+/*Holds Article Content */
+.slideshow{
+    /* background-color: teal; */
+    padding: 0;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+/* Specific styling for buttons to scroll articles left and right */
+.arrow{
+    flex: 0 0 2rem;
+    height: 2rem;
+    margin: .4rem;
+}
+
+/* Box that holds all articles */
+.article-box{
+    flex: 1 1 auto;
+    height: 100%;
+    position: relative;
+}
+
+ 
+.article{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0; /*All articles start off with 0 opacity. slideshow.js sets first article to visible using .showSlideX classes below*/
+    transition: 0.3s;
+}
+
+/* Rules to show and hide specific articles. There has to be a better way to do this which I will probably figure out at some point */
+.showSlide1 #article1{
+    opacity: 100;
+}
+
+.showSlide2 #article2{
+    opacity: 100;
+}
+
+.showSlide3 #article3{
+    opacity: 100;
+}
+
+#text_side_article{
+    background-color: rgb(244, 237, 234);
+    border-radius: 1rem;
+    z-index: 2; /* Needed to place any text/button over the top of any image. Hard to explain in comment */
+    flex: 0 1 50%;
+    margin: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Header Rules */
+.h1_bottom{
+    font-size: 3rem;
+    margin: 5rem 1rem 0 1rem;
+}
+
+.h1_top{
+    position: absolute;
+    background-color: #0074B7;
+    font-size: 4rem;
+    font-weight: 500;
+    color: #f4edea;
+    padding: 1rem;
+    border-radius: 1rem;
+    top: -4rem;
+    left: -1rem;
+}
+
+/* Main text rules */
+#text_side_article p{
+    margin: 1rem 1rem;
+    overflow: hidden;
+    flex: 0 1 50%;
+}
+
+.article .button{
+    background-color: #0074B7;
+    border-color: #0074B7;
+    color: #f4edea;
+    height: 1.2rem;
+    padding: 10px;
+    margin-left: 1rem;
+}
+
+.article .button:hover{
+    background-color: #60A3D9;
+    border-color: #60A3D9;
+    color: #f4edea;
+}
+
+.button_container{
+    height: auto;
+    margin: 1rem;
+    display: flex;
+    justify-content: end;
+}
+
+#img_side_article{
+    flex: 0 1 50%;
+    margin: 1rem;
+}
+
+#img_side_article img{
+    height: 95%; /* Needed to seperate top of image from top of article container for some reason? Need to look into why margins not working in vertical direction*/
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/*Breakpoints*/
+
+/* 1500px Smaller Text Header and Footer */
+@media only screen and (max-width: 1500px){
+
+}
+
+/*Mobile View Breakpoint*/
+@media only screen and (max-width: 1000px){
+    .article{
+        flex-direction: column-reverse;
+    }
+
+    #img_side_article{
+        height: 300px; /* I have to be an idiot cause I have NO IDEA why this is needed to make image resizing work properly*/
+        flex: 1 1 auto;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #img_side_article img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        margin: 0px;
+        padding: 0px;
+        /* display: none; */
+    }
+
+    #text_side_article{
+        flex: 0 0 auto;
+    }
+}
