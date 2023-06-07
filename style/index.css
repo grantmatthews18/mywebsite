@@ -135,7 +135,7 @@
     }
 
     #img_side_article{
-        height: 300px; /* I have to be an idiot cause I have NO IDEA why this is needed to make image resizing work properly*/
+        height: 300px;
         flex: 1 1 auto;
         margin: 0px;
         padding: 0px;

@@ -24,10 +24,23 @@ body{
     max-width: 2050px;
     margin:  0px auto;
     padding-top: 1px;
-    height: 99.5%; /* 99.5 to account for auto browser padding, again janky but gets the job done */
-    max-height: 50rem;
+    /* 99.5 to account for auto browser padding, again janky but gets the job done */
+    height: 99.5vh;
     display: flex;
     flex-direction: column;
+}
+
+/* Changes height from 100vh to 50rem when max height is reached */
+@media only screen and (min-height: 100rem){
+    body{
+        height: 72rem;
+    }
+}
+
+@media only screen and (max-height: 72rem){
+    body{
+        height: 52rem;
+    }
 }
 
 .button_container{
@@ -59,7 +72,8 @@ body{
 .content{
     background-color: #003B73;
     max-width: 2000px;
-    min-height: 1100px;
+    height: 100vh;
+    /* min-height: 1100px; */
     padding: 1rem;
     margin: 1rem 1rem 0 1rem;
     border-radius: 1rem;
