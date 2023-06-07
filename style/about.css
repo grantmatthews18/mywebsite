@@ -1,10 +1,19 @@
+.article-box{
+    flex: 1 1 auto;
+    height: 100%;
+    position: relative;
+}
+
 .article{
-    flex: 0 1 auto;
-    margin: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
-    background-color: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 1rem;
     padding: 0;
 }
 
@@ -48,6 +57,7 @@
 .image_box{
     border-radius: 1rem;
     width: 100%;
+    max-height: 1200px;
     overflow: hidden;
 }
 
@@ -55,4 +65,36 @@
     height: 95%;
     width: 100%;
     object-fit: cover;
+}
+
+/*Mobile View Breakpoint*/
+@media only screen and (max-width: 1000px){
+    body{
+        max-height: none;
+        height: auto;
+    }
+
+    .article{
+        flex-direction: column-reverse;
+    }
+
+    #img_side_article{
+        height: 300px; /* I have to be an idiot cause I have NO IDEA why this is needed to make image resizing work properly*/
+        flex: 1 1 auto;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #img_side_article img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        margin: 0px;
+        padding: 0px;
+        /* display: none; */
+    }
+
+    #text_side_article{
+        flex: 0 0 auto;
+    }
 }

@@ -1,19 +1,27 @@
 body{
     max-height: none;
-    height: auto;
+    height: 500rem;
 }
 
-.article_holder{
-    display: flex;
-    flex-direction: column;
+.article-box{
+    flex: 1 1 auto;
+    height: 100%;
+    position: relative;
 }
 
 .article{
-    flex: 1 1 auto;
+    background-color: #60A3D9;
     margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .reverse_article{
@@ -58,6 +66,14 @@ body{
     display: inline;
 }
 
+ul{
+    margin: 1rem;
+}
+
+ol{
+    margin: 1rem;
+}
+
 .button{
     background-color: #0074B7;
     border-color: #0074B7;
@@ -82,19 +98,14 @@ body{
 .image_box{
     border-radius: 1rem;
     overflow: hidden;
-}
-
-/* Gesture Project Image Rules */
-.gesture_image_box{
-    height: 0;
-    min-height: 80%;
-}
-
-.gesture_image_box img{
+    min-height: 0;
     height: 100%;
+}
+
+.image_box img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: left;
 }
 
 /* Wordle Project Image Rules */
@@ -102,7 +113,6 @@ body{
     background-color: #0074B7;
     border-radius: 1rem;
     display: flex;
-    /* Will definitely need to adjust this for responsive design */
     height: 24rem; 
 }
 
@@ -135,41 +145,13 @@ body{
 }
 
 /* Website Image Rules */
-.website_image_box{
-    min-height: 0;
-    height: 80%;
-}
-
 .website_image_box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     object-position: left;
 }
 
 /* My Server Image Rules */
-.server_image_box{
-    min-height: 0;
-    height: 80%;
-}
-
 .server_image_box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     object-position: left;
-}
-
-/* My Car Image Rules */
-.car_image_box{
-    min-height: 0;
-    height: 80%;
-}
-
-.car_image_box img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 
@@ -181,5 +163,14 @@ body{
 
 /*Mobile View Breakpoint*/
 @media only screen and (max-width: 1000px){
-   
+   .article{
+        flex-direction: column-reverse;
+        height: auto;
+   }
+
+   .image_box img{
+        height: 20rem;
+        width: 100%;
+   }
+
 }

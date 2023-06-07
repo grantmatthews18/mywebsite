@@ -65,7 +65,7 @@
 /* Header Rules */
 .h1_bottom{
     font-size: 3rem;
-    margin: 5rem 1rem 0 1rem;
+    margin: 7rem 1rem 0 1rem;
 }
 
 .h1_top{
@@ -135,7 +135,7 @@
     }
 
     #img_side_article{
-        height: 300px; /* I have to be an idiot cause I have NO IDEA why this is needed to make image resizing work properly*/
+        height: 300px;
         flex: 1 1 auto;
         margin: 0px;
         padding: 0px;
