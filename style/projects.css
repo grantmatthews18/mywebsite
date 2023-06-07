@@ -1,23 +1,27 @@
 body{
     max-height: none;
-    height: auto;
+    height: 500rem;
 }
 
-.article_holder{
-    display: flex;
-    flex-direction: column;
+.article-box{
+    flex: 1 1 auto;
+    height: 100%;
+    position: relative;
 }
 
 .article{
     background-color: #60A3D9;
-    flex: 1 1 auto;
-    height: fit-content;
     margin: 1rem;
     padding: 1rem;
     border-radius: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .reverse_article{
