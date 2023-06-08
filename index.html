@@ -33,12 +33,15 @@
 
             <script src="scripts/slideshow.js" async></script>
             <div class="slideshow">
-                <div class="arrow button" onclick="previousSlide(this)">
+                <div class="arrow button" id="left_button" onclick="previousSlide(this)">
                     <p>&lt;</p>
                 </div>
                 <div class="article-box">
                     <article class="article"  id="article1">
-                        <div id="text_side_article">
+                        <div class="image_article">
+                            <img src="media/images/me_temp.jpg" alt="Headshot Of Grant">
+                        </div>
+                        <div class="text_article">
                             <h1 class="h1_top" id="hi">Hi!</h1>
                             <h1 class="h1_bottom" id="my_name">My Name is Grant Matthews</h1>
                             <p id="p1">Welcome to my portfolio website! I'm Grant Matthews, a Software Engineer specializing in C Languages, Python, and artificial intelligence. Explore my projects showcasing innovative solutions and my passion for technology. Let's connect and explore exciting opportunities to make an impact together!</p>
@@ -55,12 +58,12 @@
                                 </a>
                             </div>
                         </div>
-                        <div id="img_side_article">
-                            <img src="media/images/me_temp.jpg" alt="Headshot Of Grant">
-                        </div>
                     </article>
                     <article class="article"  id="article2">
-                        <div id="text_side_article">
+                        <div class="image_article">
+                            <img src="media/images/move4_wordle.jpg" alt="Wordle Game Board">
+                        </div>
+                        <div class="text_article">
                             <h1 class="h1_top">Project:</h1>
                             <h1 class="h1_bottom">Auto-Wordle: A Wordle Solving AI</h1>
                             <p id="p1">Wordle, a word guess game, exploded in popularity during the COVID-19 pandemic. As part of my University of Minnesota coursework, I developed an algorithm to solve Wordle puzzles with the goal of being more successful than a human player. Explore the solutions that I developed and compare them to the success of a human player.</p>
@@ -70,14 +73,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- NEED TO RECOLOR IMAGE AND CSS THE CREDIT -->
-                        <div id="img_side_article">
-                            <img src="media/images/wordle-splash.png" alt="Headshot Of Grant">
-                            <p>Credit University of Florida</p>
-                        </div>
                     </article>
                     <article class="article"  id="article3">
-                        <div id="text_side_article">
+                        <div class="image_article">
+                            <img src="media/images/website_code_image.png" alt="Image of This Website's Source Code">
+                        </div>
+                        <div class="text_article">
                             <h1 class="h1_top">Project:</h1>
                             <h1 class="h1_bottom">This Website</h1>
                             <p id="p1">My University of Minnesota coursework was focused on back end and algorithm development. Despite a very limited knowledge of HTML, CSS, Javascript and other front end web tools after graduation, I used the 5 months since to challenge myself and learn more about web development. Learn more about how this website was created, what tools I used and what learning I continue to do.</p>
@@ -87,13 +88,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Probably need a better image, ideally a screenshot of this code -->
-                        <div id="img_side_article">
-                            <img src="media/images/html-code-temp.webp" alt="Headshot Of Grant">
-                        </div>
                     </article>
                 </div>
-                <div class="arrow button" onclick="nextSlide(this)">
+                <div class="arrow button" id="right_button" onclick="nextSlide(this)">
                     <p>&gt;</p>
                 </div>
             </div>

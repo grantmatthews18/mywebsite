@@ -1,3 +1,12 @@
+.container{
+    background-color: #60A3D9;
+    margin: 1rem;
+    border-radius: 1rem;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+}
+
 .article-box{
     flex: 1 1 auto;
     height: 100%;
@@ -24,7 +33,7 @@
     position: relative;
     top: 0;
     left: 0;
-    flex: 0 1 50%;
+    flex: 0 0 50%;
     align-self: center;
 }
 
@@ -48,53 +57,62 @@
     margin-top: 3rem;
 }
 
-.img_article{
+.image_article{
     flex: 0 1 50%;
-    align-self: center;
     margin: 1rem;
 }
 
-.image_box{
-    border-radius: 1rem;
+.image_article img{
     width: 100%;
-    max-height: 1200px;
-    overflow: hidden;
-}
-
-.img_article img{
-    height: 95%;
-    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 1rem;
 }
 
 /*Mobile View Breakpoint*/
-@media only screen and (max-width: 1000px){
+@media only screen and ((max-device-width: 768px) or (max-width: 768px)){
     body{
-        max-height: none;
-        height: auto;
+        min-height: 82rem;
     }
 
-    .article{
-        flex-direction: column-reverse;
-    }
-
-    #img_side_article{
-        height: 300px; /* I have to be an idiot cause I have NO IDEA why this is needed to make image resizing work properly*/
-        flex: 1 1 auto;
-        margin: 0px;
-        padding: 0px;
+    .container{
+        margin: 0;
     }
     
-    #img_side_article img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        margin: 0px;
-        padding: 0px;
-        /* display: none; */
+    .article{
+        display: grid;
+        grid-template-rows: 1fr fit-content(100rem);
     }
 
-    #text_side_article{
-        flex: 0 0 auto;
+    .image_article{
+        margin: 1rem;
+        margin-bottom: -4rem;
+        position: relative;
+    }
+    
+    .image_article img{
+        position: absolute;
+        top: 0;
+        bottom: -2rem;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media screen and ((max-device-width: 425px) or (max-width: 425px)){ 
+    body{
+        min-height: 121rem;
+    }
+    .text_article h1{
+        font-size: 6rem;
+        top: -7rem;
+    }
+
+    #article_p1{
+        margin-top: 8rem;
+    }
+
+    .text_article p{
+        font-size: 1.5rem;
     }
 }
