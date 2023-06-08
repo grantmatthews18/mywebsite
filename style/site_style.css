@@ -578,3 +578,12 @@ footer{
         margin: 1rem 1rem 1rem 1rem;
     }
 }
+
+@media only screen 
+    and (device-width: 428px) 
+    and (device-height: 926px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        body{
+            background-color: red;
+        }
+     }
