@@ -124,7 +124,7 @@
 
 /*Breakpoints*/
 /*Mobile View Breakpoint*/
-@media only screen and ((max-device-width: 768px) or (max-width: 768px)){
+@media screen and ((max-device-width: 768px) or (max-width: 768px)){
     body{
         height: 100vh;
     }
