@@ -9,6 +9,8 @@ html{
     font-family: rubik, sans-serif;
     font-size: 22px;
     background-color: #f4edea;
+    /* Might fix my apple text display issues */
+    -webkit-font-smoothing: antialiased;
 }
 
 ul{
