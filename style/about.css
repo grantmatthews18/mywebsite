@@ -71,25 +71,48 @@
 
 /*Mobile View Breakpoint*/
 @media only screen and ((max-device-width: 768px) or (max-width: 768px)){
+    body{
+        min-height: 82rem;
+    }
+
+    .container{
+        margin: 0;
+    }
+    
     .article{
-        background-color: green;
         display: grid;
         grid-template-rows: 1fr fit-content(100rem);
     }
 
-    #image_article{
-        height: 100%;
-        margin: 2rem;
-        margin-bottom: -2rem;
+    .image_article{
+        margin: 1rem;
+        margin-bottom: -4rem;
         position: relative;
     }
     
-    #image_article img{
-        height: 100%;
+    .image_article img{
         position: absolute;
         top: 0;
         bottom: -2rem;
         left: 0;
         right: 0;
+    }
+}
+
+@media screen and ((max-device-width: 425px) or (max-width: 425px)){ 
+    body{
+        min-height: 121rem;
+    }
+    .text_article h1{
+        font-size: 6rem;
+        top: -7rem;
+    }
+
+    #article_p1{
+        margin-top: 8rem;
+    }
+
+    .text_article p{
+        font-size: 1.5rem;
     }
 }

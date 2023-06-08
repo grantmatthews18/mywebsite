@@ -207,11 +207,6 @@
         font-size: 2rem;
     }
 
-    .article{
-        display: grid;
-        grid-template-rows: 1fr fit-content(100rem);
-    }
-
     .text_article{
         height: 37rem;
     }
