@@ -68,7 +68,7 @@
 }
 
 /*Mobile View Breakpoint*/
-@media only screen and (max-width: 1000px){
+@media only screen and (max-device-width: 768px){
     body{
         max-height: none;
         height: auto;

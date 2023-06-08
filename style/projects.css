@@ -156,13 +156,8 @@ ol{
 
 
 /*Breakpoints*/
-
-/* 1500px Smaller Text Header and Footer */
-@media only screen and (max-width: 1500px){
-}
-
 /*Mobile View Breakpoint*/
-@media only screen and (max-width: 1000px){
+@media only screen and (max-device-width: 768px){
    .article{
         flex-direction: column-reverse;
         height: auto;

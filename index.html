@@ -33,11 +33,14 @@
 
             <script src="scripts/slideshow.js" async></script>
             <div class="slideshow">
-                <div class="arrow button" onclick="previousSlide(this)">
+                <div class="arrow button" id="left_button" onclick="previousSlide(this)">
                     <p>&lt;</p>
                 </div>
                 <div class="article-box">
                     <article class="article"  id="article1">
+                        <div id="img_side_article">
+                            <img src="media/images/me_temp.jpg" alt="Headshot Of Grant">
+                        </div>
                         <div id="text_side_article">
                             <h1 class="h1_top" id="hi">Hi!</h1>
                             <h1 class="h1_bottom" id="my_name">My Name is Grant Matthews</h1>
@@ -55,11 +58,11 @@
                                 </a>
                             </div>
                         </div>
-                        <div id="img_side_article">
-                            <img src="media/images/me_temp.jpg" alt="Headshot Of Grant">
-                        </div>
                     </article>
                     <article class="article"  id="article2">
+                        <div id="img_side_article">
+                            <img src="media/images/move4_wordle.jpg" alt="Wordle Game Board">
+                        </div>
                         <div id="text_side_article">
                             <h1 class="h1_top">Project:</h1>
                             <h1 class="h1_bottom">Auto-Wordle: A Wordle Solving AI</h1>
@@ -70,13 +73,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- NEED TO RECOLOR IMAGE AND CSS THE CREDIT -->
-                        <div id="img_side_article">
-                            <img src="media/images/wordle-splash.png" alt="Headshot Of Grant">
-                            <p>Credit University of Florida</p>
-                        </div>
                     </article>
                     <article class="article"  id="article3">
+                        <div id="img_side_article">
+                            <img src="media/images/website_code_image.png" alt="Image of This Website's Source Code">
+                        </div>
                         <div id="text_side_article">
                             <h1 class="h1_top">Project:</h1>
                             <h1 class="h1_bottom">This Website</h1>
@@ -87,13 +88,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Probably need a better image, ideally a screenshot of this code -->
-                        <div id="img_side_article">
-                            <img src="media/images/html-code-temp.webp" alt="Headshot Of Grant">
-                        </div>
                     </article>
                 </div>
-                <div class="arrow button" onclick="nextSlide(this)">
+                <div class="arrow button" id="right_button" onclick="nextSlide(this)">
                     <p>&gt;</p>
                 </div>
             </div>

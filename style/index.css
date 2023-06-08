@@ -29,6 +29,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-direction: row-reverse;
     top: 0;
     bottom: 0;
     left: 0;
@@ -122,35 +123,117 @@
 }
 
 /*Breakpoints*/
-
-/* 1500px Smaller Text Header and Footer */
-@media only screen and (max-width: 1500px){
-
-}
-
 /*Mobile View Breakpoint*/
-@media only screen and (max-width: 1000px){
+@media only screen and (max-device-width: 768px){
+    .slideshow{
+        margin: 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto 4rem;
+    }
+
+    .article-box{
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 1;
+    }
+
+    .arrow{
+        height: 2rem;
+        margin: 1rem;
+        font-size: 1rem;
+    }
+
+    /* Putting both buttons after the article */
+    #left_button{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    #right_button{
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+
     .article{
-        flex-direction: column-reverse;
+        display: grid;
+        grid-template-rows: 1fr fit-content(100rem);
+        /* flex-direction: column-reverse; */
+    }
+
+    #text_side_article{
+        /* height: 37rem; */
+    }
+    
+    /* Header Rules */
+    .h1_bottom{
+        font-size: 1.5rem;
+        margin: 5rem 1rem 0 1rem;
+    }
+    
+    .h1_top{
+        font-size: 3rem;
+        top: -4rem;
+    }
+    
+    .article .button{
+        height: 1.2rem;
+        font-size: 1rem;
     }
 
     #img_side_article{
-        height: 300px;
-        flex: 1 1 auto;
-        margin: 0px;
-        padding: 0px;
+        height: 100%;
+        margin: 2rem;
+        margin-bottom: -2rem;
+        position: relative;
     }
     
     #img_side_article img{
         height: 100%;
-        width: 100%;
-        object-fit: cover;
-        margin: 0px;
-        padding: 0px;
-        /* display: none; */
+        position: absolute;
+        top: 0;
+        bottom: -2rem;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media screen and (max-device-width: 425px){
+    .slideshow{
+        grid-template-rows: auto 8rem;
+    }
+
+    .arrow{
+        height: 4rem;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+
+    .article{
+        display: grid;
+        grid-template-rows: 1fr fit-content(100rem);
     }
 
     #text_side_article{
-        flex: 0 0 auto;
+        height: 37rem;
+    }
+    
+    /* Header Rules */
+    .h1_bottom{
+        font-size: 3rem;
+        margin: 7rem 1rem 0 1rem;
+    }
+    
+    .h1_top{
+        font-size: 6rem;
+        top: -7rem;
+    }
+
+    #text_side_article p{
+        font-size: 1.5rem;
+    }
+    
+    .article .button{
+        height: 3.6rem;
+        font-size: 2rem;
     }
 }
