@@ -124,7 +124,8 @@
 
 /*Breakpoints*/
 /*Mobile View Breakpoint*/
-@media screen and ((max-device-width: 768px) or (max-width: 768px)){
+@media screen and ((max-device-width: 768px) or (max-width: 768px)),
+    screen and (max-device-width: 768px) and (-webkit-device-pixel-ratio: 3){
     body{
         height: 100vh;
     }
@@ -223,7 +224,8 @@
     }
 }
 
-@media screen and ((max-device-width: 425px) or (max-width: 425px)){
+@media screen and ((max-device-width: 425px) or (max-width: 425px)),
+    screen and (max-device-width: 425px) and (-webkit-device-pixel-ratio: 3){
 
     .slideshow{
         grid-template-rows: auto 1.75rem;
