@@ -50,11 +50,11 @@
 }
 
 .text_article p{
-    margin: 1rem;
+    margin: 1.5rem 1rem 1rem 1rem;
 }
 
 #article_p1 {
-    margin-top: 3rem;
+    margin-top: 3.5rem;
 }
 
 .image_article{
@@ -72,20 +72,46 @@
 /*Mobile View Breakpoint*/
 @media only screen and ((max-device-width: 768px) or (max-width: 768px)){
     body{
-        min-height: 82rem;
+        min-height: none;
+        max-height: none;
+        height: auto;
     }
 
     .container{
-        margin: 0;
+        background-color: initial;
+        margin: 0.5rem 0 0 0;
+    }
+
+    .article-box{
+        height: auto;
     }
     
     .article{
+        margin: 0;
         display: grid;
-        grid-template-rows: 1fr fit-content(100rem);
+        grid-template-rows: 20rem fit-content(100rem);
+        position: relative;
+    }
+    
+    .text_article{
+        border-radius: 0 0 0.5rem 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .text_article h1{
+        left: -0.5rem;
+        top: -2.5rem;
+    }
+
+    .text_article p{
+    }
+
+    #article_p1 {
+        margin-top: 4rem;
     }
 
     .image_article{
-        margin: 1rem;
+        margin: 0.5rem;
         margin-bottom: -4rem;
         position: relative;
     }
@@ -99,20 +125,25 @@
     }
 }
 
-@media screen and ((max-device-width: 425px) or (max-width: 425px)){ 
-    body{
-        min-height: 121rem;
-    }
-    .text_article h1{
-        font-size: 6rem;
-        top: -7rem;
+@media screen and ((max-device-width: 425px) or (max-width: 425px)){
+    .article{
+        grid-template-rows: 15rem fit-content(100rem);
     }
 
-    #article_p1{
-        margin-top: 8rem;
+    .text_article h1{
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 2rem;
+        top: -2.5rem;
+    }
+
+    #article_p1 {
+        margin-top: 3rem;
     }
 
     .text_article p{
-        font-size: 1.5rem;
+        padding: 0;
+        margin: 0.5rem 0.5rem;
+        font-size: 0.75rem;
     }
 }
