@@ -73,6 +73,7 @@ body{
 
 /*Navigation Rules/Header */
 .header{
+    flex: 0 0 auto;
     background-color: #f4edea;
     height: 4rem;
     border-radius: 1rem;
@@ -220,7 +221,7 @@ footer{
     /*Navigation Rules/Header */
     .header{
         height: 4rem;
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         flex-wrap: wrap;
         justify-content: right;
         margin: 0;

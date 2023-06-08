@@ -148,12 +148,33 @@ ol{
     }
     
     .article{
-        margin: 0;
-        margin-bottom: 1rem;
+        padding: 0;
+        margin: 0.5rem 0;
+        border-radius: 0.5rem;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr fit-content(100rem);
+        grid-template-rows: 20rem fit-content(100rem);
+    }
 
+    .text_article{
+        border-radius: 0 0 0.5rem 0.5rem;
+        margin: 1rem;
+    }
+
+    .text_article h1{
+        top: -2.5rem;
+        left: -0.5rem;
+    }
+    
+    .text_article h2{
+        margin: 4rem 1rem 0 1rem;
+    }
+
+    .button_container{
+        height: auto;
+        margin: 0.5rem;
+        display: flex;
+        justify-content: end;
     }
 
     .image_article{
@@ -162,19 +183,22 @@ ol{
         left: 0;
         right: 0;
         bottom: 0;
-        height: 30rem;
         margin: 1rem;
         margin-bottom: -5rem;
    }
 
+   .image_article img{
+        border-radius: 0.5rem;
+   }
+
    .wordle_image_article{
-    background-color: none;
-    border-radius: 1rem;
-    top: auto;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    display: block;
+        background-color: none;
+        border-radius: 0.5rem;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        display: block;
     }
     .wordle_image_box{
         margin: 0;
@@ -190,7 +214,6 @@ ol{
     }
     #wordle_image_box_4{
         margin: 0;
-        display: ;
     }
     .wordle_image_box img{
         width: 100%;
@@ -201,16 +224,45 @@ ol{
 
 @media screen and ((max-device-width: 425px) or (max-width: 425px)){ 
 
+    .article{
+        grid-template-rows: 15rem fit-content(100rem);
+    }
+
     .text_article h1{
-        font-size: 3rem;
-        top: -4rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        top: -2rem;
     }
 
     .text_article h2{
-        margin: 5rem 1rem 1rem 1rem;
+        font-size: 1rem;
+        margin: 2.5rem 1rem 1rem 1rem;
     }
 
     .text_article p{
-        font-size: 1.5rem;
+        padding: 0;
+        margin: 0.5rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .text_article h5{
+        font-size: 0.75rem;
+        display: inline;
+    }
+    
+    ul{
+        margin: 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    ol{
+        margin: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .article .button{
+        height: .6rem;
+        font-size: 0.5rem;
     }
 }
