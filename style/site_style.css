@@ -194,14 +194,14 @@ footer{
 
 /*Breakpoints*/
 /* 1500px Smaller Text Header and Footer */
-@media only screen and ((max-device-width: 1440px) or (max-width: 1440px)){
+@media screen and ((max-device-width: 1440px) or (max-width: 1440px)){
     html{
         font-size: 14px;
     }
 }
 
 /*Mobile View Breakpoint*/
-@media only screen and ((max-device-width: 768px) or (max-width: 768px)){
+@media screen and ((max-device-width: 768px) or (max-width: 768px)){
     html{
         font-size: 22px;
     }
