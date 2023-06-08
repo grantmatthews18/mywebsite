@@ -1,11 +1,10 @@
 /*Holds Article Content */
 .slideshow{
-    /* background-color: teal; */
     padding: 0;
     margin: 1rem;
     border-radius: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex: 1 1 auto;
 }
@@ -19,7 +18,7 @@
 
 /* Box that holds all articles */
 .article-box{
-    flex: 1 1 auto;
+    flex: 0 1 90%;
     height: 100%;
     position: relative;
 }
@@ -27,6 +26,7 @@
  
 .article{
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     flex-direction: row-reverse;
@@ -52,7 +52,7 @@
     opacity: 100;
 }
 
-#text_side_article{
+#text_article{
     background-color: rgb(244, 237, 234);
     border-radius: 1rem;
     z-index: 2; /* Needed to place any text/button over the top of any image. Hard to explain in comment */
@@ -82,7 +82,7 @@
 }
 
 /* Main text rules */
-#text_side_article p{
+#text_article p{
     margin: 1rem 1rem;
     overflow: hidden;
     flex: 0 1 50%;
@@ -110,21 +110,21 @@
     justify-content: end;
 }
 
-#img_side_article{
+#image_article{
     flex: 0 1 50%;
     margin: 1rem;
 }
 
-#img_side_article img{
-    height: 95%; /* Needed to seperate top of image from top of article container for some reason? Need to look into why margins not working in vertical direction*/
+#image_article img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 1rem;
 }
 
 /*Breakpoints*/
 /*Mobile View Breakpoint*/
-@media only screen and (max-device-width: 768px){
+@media only screen and ((max-device-width: 768px) or (max-width: 768px)){
     .slideshow{
         margin: 0;
         display: grid;
@@ -157,10 +157,9 @@
     .article{
         display: grid;
         grid-template-rows: 1fr fit-content(100rem);
-        /* flex-direction: column-reverse; */
     }
 
-    #text_side_article{
+    #text_article{
         /* height: 37rem; */
     }
     
@@ -180,14 +179,14 @@
         font-size: 1rem;
     }
 
-    #img_side_article{
+    #image_article{
         height: 100%;
         margin: 2rem;
         margin-bottom: -2rem;
         position: relative;
     }
     
-    #img_side_article img{
+    #image_article img{
         height: 100%;
         position: absolute;
         top: 0;
@@ -197,7 +196,7 @@
     }
 }
 
-@media screen and (max-device-width: 425px){
+@media screen and ((max-device-width: 425px) or (max-width: 425px)){
     .slideshow{
         grid-template-rows: auto 8rem;
     }
@@ -213,7 +212,7 @@
         grid-template-rows: 1fr fit-content(100rem);
     }
 
-    #text_side_article{
+    #text_article{
         height: 37rem;
     }
     
@@ -228,7 +227,7 @@
         top: -7rem;
     }
 
-    #text_side_article p{
+    #text_article p{
         font-size: 1.5rem;
     }
     

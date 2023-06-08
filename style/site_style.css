@@ -25,7 +25,7 @@ body{
     margin:  0px auto;
     padding-top: 1px;
     height: 99.5vh;
-    min-height: 50rem;
+    min-height: 62rem;
     max-height: 75rem;
     display: flex;
     flex-direction: column;
@@ -192,14 +192,14 @@ footer{
 
 /*Breakpoints*/
 /* 1500px Smaller Text Header and Footer */
-@media only screen and (max-device-width: 1440px){
+@media only screen and ((max-device-width: 1440px) or (max-width: 1440px)){
     html{
         font-size: 14px;
     }
 }
 
 /*Mobile View Breakpoint*/
-@media only screen and (max-device-width: 768px){
+@media only screen and ((max-device-width: 768px) or (max-width: 768px)){
     html{
         font-size: 22px;
     }
