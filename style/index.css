@@ -130,8 +130,55 @@
 
 /*Mobile View Breakpoint*/
 @media only screen and (max-width: 1000px){
+    .slideshow{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    /* Putting both buttons after the article */
+    #left_button{
+        order: 2;
+    }
+    #right_button{
+        order: 3;
+    }
+
+    .arrow{
+        flex: 0 0 4rem;
+        height: 4rem;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+    
+    .article-box{
+        order: 1;
+        flex: 1 1 100%;
+        height: 92%;
+        /* height: auto; */
+    }
+    
+
     .article{
         flex-direction: column-reverse;
+    }
+    
+    /* Header Rules */
+    .h1_bottom{
+        font-size: 4.5rem;
+        margin: 7rem 1rem 0 1rem;
+    }
+    
+    .h1_top{
+        font-size: 6rem;
+        top: -7rem;
+    }
+
+    #text_side_article p{
+        font-size: 2rem;
+    }
+    
+    .article .button{
+        height: 3.6rem;
+        font-size: 2rem;
     }
 
     #img_side_article{
