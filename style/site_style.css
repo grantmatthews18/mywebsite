@@ -24,23 +24,11 @@ body{
     max-width: 2050px;
     margin:  0px auto;
     padding-top: 1px;
-    /* 99.5 to account for auto browser padding, again janky but gets the job done */
     height: 99.5vh;
+    min-height: 50rem;
+    max-height: 75rem;
     display: flex;
     flex-direction: column;
-}
-
-/* Changes height from 100vh to 50rem when max height is reached */
-@media only screen and (min-height: 100rem){
-    body{
-        height: 72rem;
-    }
-}
-
-@media only screen and (max-height: 72rem){
-    body{
-        height: 52rem;
-    }
 }
 
 .button_container{
@@ -203,27 +191,28 @@ footer{
 }
 
 /*Breakpoints*/
-
 /* 1500px Smaller Text Header and Footer */
-@media only screen and (max-width: 1500px){
+@media only screen and (max-device-width: 1440px){
     html{
         font-size: 14px;
     }
 }
 
 /*Mobile View Breakpoint*/
-@media only screen and (max-width: 1000px){
+@media only screen and (max-device-width: 768px){
     html{
         font-size: 22px;
     }
     
     body{
         height: 100vh;
+        min-height: none;
+        max-height: none;
     }
     
     /*Navigation Rules/Header */
     .header{
-        height: 8rem;
+        height: 4rem;
         border-radius: 1rem;
         flex-wrap: wrap;
         justify-content: center;
@@ -232,7 +221,7 @@ footer{
     }
     
     #nav_title h2{
-        font-size: 3rem;
+        font-size: 1.5rem;
         font-weight: 400;
         margin-left: 1rem;
     }
@@ -245,14 +234,14 @@ footer{
 
     .bar{
        background-color: black;
-       width: 72px;
-       height: 9px;
-       margin: 12px 0px;
+       width: 24px;
+       height: 3px;
+       margin: 4px 0px;
        transition: 0.3s;
     }
 
     .hamburgerTransform #bar1{
-        transform: translate(0, 21px) rotate(45deg);
+        transform: translate(0, 7px) rotate(45deg);
     }
 
     .hamburgerTransform #bar2{
@@ -260,7 +249,7 @@ footer{
     }
 
     .hamburgerTransform #bar3{
-        transform: translate(0, -21px) rotate(-45deg);
+        transform: translate(0, -7px) rotate(-45deg);
     }
     
     .nav_menu{
@@ -305,8 +294,8 @@ footer{
     }
     
     #site_links a{
-        line-height: 5rem;
-        font-size: 3rem;
+        line-height: 3rem;
+        font-size: 1.5rem;
         font-weight: 300;
     }
     
@@ -326,13 +315,49 @@ footer{
     }
 
     .header_icon{
-        height: 4rem;
-        width: 4rem;
+        height: 2rem;
+        width: 2rem;
         padding: 0;
-        margin: 1rem 2rem 1rem 1rem;
+        margin: 1rem;
     }
 
     #nav_social #last_icon{
         margin-right: 0;
+    }
+}
+
+@media screen and (max-device-width: 425px){ 
+
+    .header{
+        height: 8rem;
+    }
+    
+    #nav_title h2{
+        font-size: 3rem;
+    }
+
+    .bar{
+       width: 72px;
+       height: 9px;
+       margin: 12px 0px;
+    }
+
+    .hamburgerTransform #bar1{
+        transform: translate(0, 21px) rotate(45deg);
+    }
+
+    .hamburgerTransform #bar3{
+        transform: translate(0, -21px) rotate(-45deg);
+    }
+    
+    #site_links a{
+        line-height: 3rem;
+        font-size: 1.5rem;
+    }
+    
+    .header_icon{
+        height: 4rem;
+        width: 4rem;
+        margin: 1rem 2rem 1rem 1rem;
     }
 }
