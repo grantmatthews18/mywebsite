@@ -72,6 +72,7 @@
 /*Mobile View Breakpoint*/
 @media only screen and ((max-device-width: 768px) or (max-width: 768px)){
     .article{
+        background-color: green;
         display: grid;
         grid-template-rows: 1fr fit-content(100rem);
     }

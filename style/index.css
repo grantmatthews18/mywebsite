@@ -52,7 +52,7 @@
     opacity: 100;
 }
 
-#text_article{
+.text_article{
     background-color: rgb(244, 237, 234);
     border-radius: 1rem;
     z-index: 2; /* Needed to place any text/button over the top of any image. Hard to explain in comment */
@@ -82,7 +82,7 @@
 }
 
 /* Main text rules */
-#text_article p{
+.text_article p{
     margin: 1rem 1rem;
     overflow: hidden;
     flex: 0 1 50%;
@@ -110,12 +110,12 @@
     justify-content: end;
 }
 
-#image_article{
+.image_article{
     flex: 0 1 50%;
     margin: 1rem;
 }
 
-#image_article img{
+.image_article img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -159,7 +159,7 @@
         grid-template-rows: 1fr fit-content(100rem);
     }
 
-    #text_article{
+    .text_article{
         /* height: 37rem; */
     }
     
@@ -179,14 +179,14 @@
         font-size: 1rem;
     }
 
-    #image_article{
+    .image_article{
         height: 100%;
         margin: 2rem;
         margin-bottom: -2rem;
         position: relative;
     }
     
-    #image_article img{
+    .image_article img{
         height: 100%;
         position: absolute;
         top: 0;
@@ -212,7 +212,7 @@
         grid-template-rows: 1fr fit-content(100rem);
     }
 
-    #text_article{
+    .text_article{
         height: 37rem;
     }
     
@@ -227,7 +227,7 @@
         top: -7rem;
     }
 
-    #text_article p{
+    .text_article p{
         font-size: 1.5rem;
     }
     
