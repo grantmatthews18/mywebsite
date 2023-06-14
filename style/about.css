@@ -73,7 +73,7 @@
 @media screen and ((max-device-width: 768px) or (max-width: 768px)),
     screen and (max-device-width: 768px) and (-webkit-device-pixel-ratio: 3){
     body{
-        min-height: none;
+        min-height: 100vh;
         max-height: none;
         height: auto;
     }
@@ -88,9 +88,10 @@
     }
     
     .article{
+        height: 100%;
         margin: 0;
         display: grid;
-        grid-template-rows: 20rem fit-content(100rem);
+        grid-template-rows: minmax(25rem, 1fr) fit-content(100rem);
         position: relative;
     }
     
@@ -105,6 +106,8 @@
     }
 
     .text_article p{
+        font-size: 14px;
+        margin: 0.5rem 1rem;
     }
 
     #article_p1 {
